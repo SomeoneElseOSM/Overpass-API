@@ -6,9 +6,9 @@
 set -o pipefail
 
 # Configuration
-EXEC_DIR="/opt/overpass/bin"
-DB_DIR="/opt/overpass/db"
-LOG_DIR="/opt/overpass/log"
+EXEC_DIR="/opt/op/bin"
+DB_DIR="/opt/op/db"
+LOG_DIR="/opt/op/log"
 
 # Files
 RULES_FILE="$DB_DIR/rules/areas.osm3s"
