@@ -6,10 +6,10 @@
 set -o pipefail
 
 # Configuration
-EXEC_DIR="/opt/overpass/bin"
-DB_DIR="/opt/overpass/db"
-DIFF_DIR="/opt/overpass/diff"
-LOG_DIR="/opt/overpass/log"
+EXEC_DIR="/opt/op/bin"
+DB_DIR="/opt/op/db"
+DIFF_DIR="/opt/op/diff"
+LOG_DIR="/opt/op/log"
 
 # Process definitions (must match startup.sh)
 declare -A PROCESSES=(
