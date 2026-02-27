@@ -516,7 +516,7 @@ apply_batch()
 calculate_sleep_time()
 {
   if [[ -z "$LAST_UPDATE_WALL_CLOCK" ]]; then
-    echo 5
+    echo 120
     return
   fi
 
