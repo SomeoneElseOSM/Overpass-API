@@ -6,10 +6,10 @@
 set -o pipefail
 
 # Configuration
-EXEC_DIR="/opt/overpass/bin"
-DB_DIR="/opt/overpass/db"
-DIFF_DIR="/opt/overpass/diff"
-LOG_DIR="/opt/overpass/log"
+EXEC_DIR="/opt/op/bin"
+DB_DIR="/opt/op/db"
+DIFF_DIR="/opt/op/diff"
+LOG_DIR="/opt/op/log"
 
 # Process definitions
 declare -A PROCESSES=(
@@ -152,7 +152,7 @@ start_process() {
         
         fetch_osc)
             ionice -c 3 nice -n 19 nohup "${EXEC_DIR}/fetch_osc.sh" \
-                auto "https://planet.openstreetmap.org/replication/minute" \
+                auto "https://download.geofabrik.de/europe/britain-and-ireland-updates" \
                 "${DIFF_DIR}" \
                 >> "${LOG_DIR}/fetch_osc.out" 2>&1 &
             ;;

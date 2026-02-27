@@ -32,7 +32,7 @@ rm -f "$DB_DIR/osm3s_v0.7.54_osm_base"
 nohup "$EXEC_DIR/dispatcher" --osm-base --attic --rate-limit=2 --space=10737418240 "--db-dir=$DB_DIR" >>"$EXEC_DIR/osm_base.out" &
 
 if [[ -s "$DB_DIR/replicate_id" ]]; then
-  nohup "$EXEC_DIR/fetch_osc.sh" `cat "$DB_DIR/replicate_id"` "https://planet.openstreetmap.org/replication/minute/" "$DIFF_DIR" >>"$EXEC_DIR/fetch_osc.out" &
+  nohup "$EXEC_DIR/fetch_osc.sh" `cat "$DB_DIR/replicate_id"` "https://download.geofabrik.de/europe/britain-and-ireland-updates" "$DIFF_DIR" >>"$EXEC_DIR/fetch_osc.out" &
   nohup "$EXEC_DIR/apply_osc_to_db.sh" "$DIFF_DIR" auto --meta=attic >>"$EXEC_DIR/apply_osc_to_db.out" &
 fi
 
