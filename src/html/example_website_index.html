@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>h24.atownsend.org.uk Overpass API server</title>
+    <title>Britain and Ireland Overpass API server</title>
     <style type="text/css" media="screen">
   * {
     margin: 0px 0px 0px 0px;
@@ -189,7 +189,7 @@
     <div class="main_page">
       <div class="page_header floating_element">
         <span class="floating_element">
-          "h24.atownsend.org.uk" Overpass API server
+          Britain and Ireland Overpass API server
         </span>
       </div>
       <div class="content_section floating_element">
@@ -197,33 +197,65 @@
 
         <div class="section_header section_header_red">
           <div id="about"></div>
-          Usage
+          How to use this server
         </div>
         <div class="content_section_text">
           <p>
             To use this Overpass API server from Overpass Turbo, in <a href="https://community.openstreetmap.org/t/overpass-api-performance-issues/140598/9">"settings"</a> in
             Overpass Turbo enter:
-	    <p>
-	    <tt>https://h24/atownsend.org.uk/api</tt>.
+	    <h3>
+	      <tt>https://h24.atownsend.org.uk/api</tt>
+	    </h3>
           </p>
 
 
           <p>
                 The server only works over IPV6 and only via https.
                 If you can see this page, you can access it via IPV6.
+		<p>
+		Only data for <a href="https://download.geofabrik.de/europe/britain-and-ireland.html">Britain and Ireland</a> is loaded.
+		It is updated with changes to OSM <a href="https://download.geofabrik.de/europe/britain-and-ireland-updates/">every night</a>.
+		<p>
+		  Areas have been loaded, so area searches work.
+		  There is currently no <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Meta_data">metadata</a> (so searches by OSM user name won&#39;t work)
+		  and there is no <a href="https://wiki.openstreetmap.org/wiki/Attic_Data">attic</a> data so searches by date will not work either.
+		</p>
           </p>
 
         </div>
+          <div class="section_header">
+	    Usage Policy
+          </div>
+	  <div class="content_section_text">
+	  <p>
+	    Not for commercial use.  If you need a commercial service, look <a href="https://wiki.openstreetmap.org/wiki/Commercial_software_and_services">elsewhere</a>.
+	  <p>
+	    Don&#39;t do anything like the "problematic behaviours" listed <a href="https://dev.overpass-api.de/overpass-doc/en/preface/commons.html">here</a>.  There is no <a href="https://en.wikipedia.org/wiki/Service-level_agreement">SLA</a>, so don&#39;t complain if it is no longer available (temporarily or permanently).  Downtime is expected for database reloads.  Problematic users will be blocked, and if they <a href="https://en.osm.town/@osm_tech/115968544599864782">obfuscate</a> their origin it will <a href="https://en.wikipedia.org/wiki/Tragedy_of_the_commons">result</a> in the the server no longer being public for everyone else.
+	  </p>
+	  <div>
         <div class="section_header">
+          <div id="bugs"></div>
+                If I use this server, what will people know about me?
         </div>
-
+        <div class="content_section_text">
+          <p>
+            <a href="https://www.openstreetmap.org/user/SomeoneElse">I</a> am the only person that I&#39;ve set up
+	    to have access to this server. If you request data then the normal Linux logs will record the fact.
+	    I can&#39;t comment on who might be watching traffic between you and the server (in Germany).
+	    If you&#39;re particularly worried about people NOT knowing 
+	    I recommend that you set up your own server and serve everything from there instead.
+	  </p>
+	</div>
         <div class="section_header">
           <div id="bugs"></div>
                 Reporting Problems
         </div>
         <div class="content_section_text">
           <p>
-                Drop a message to SomeoneElse via OSM or IRC <tt>#osm-gb</tt>.
+            Drop a message to SomeoneElse
+	    via <a href="https://www.openstreetmap.org/messages/new/SomeoneElse">OSM</a/>
+	    or <a href="https://github.com/SomeoneElseOSM/Overpass-API/issues?q=is%3Aissue">Github</a>,
+	    or discuss <a href="https://community.openstreetmap.org/t/overpass-server-for-britain-and-ireland/141900">in the OSM forum</a>.
           </p>
         </div>
 
