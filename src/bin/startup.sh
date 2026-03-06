@@ -12,7 +12,9 @@ DIFF_DIR="/opt/op/diff"
 LOG_DIR="/opt/op/log"
 
 # Extra settings that hopefully will avoid "checking every second"
-export OVERPASS_UPDATE_FREQUENCY=86400
+# 86400 is 24 hours; 28000 is 8 hours.
+#export OVERPASS_UPDATE_FREQUENCY=86400
+export OVERPASS_UPDATE_FREQUENCY=28000
 export FETCH_OSC_UPDATE_TRIM=-600
 export FETCH_OSC_QUICK_RETRY_DELAY=600
 export FETCH_OSC_QUICK_RETRY_COUNT=6

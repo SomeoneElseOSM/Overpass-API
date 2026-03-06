@@ -74,6 +74,10 @@ MAX_BATCH_MB=${APPLY_OSC_TO_DB_MAX_BATCH_MB:-512}       # Maximum uncompressed s
 MAX_BATCH_TIME=${APPLY_OSC_TO_DB_MAX_BATCH_TIME:-86400} # Maximum time span per batch (1 day = 86400 seconds)
 
 # Update configuration
+
+# Uncomment for update debug
+#echo OVERPASS_UPDATE_FREQUENCY ${OVERPASS_UPDATE_FREQUENCY}
+
 UPDATE_FREQUENCY=${OVERPASS_UPDATE_FREQUENCY:-60}       # Frequency of updates in seconds
 UPDATE_TRIM=${APPLY_OSC_TO_DB_UPDATE_TRIM:--3}          # Seconds to adjust expected update time
 
@@ -625,11 +629,20 @@ START_TIME=$(date +%s)
 while true; do
   # Try to collect a batch
   if ! collect_batch "$CURRENT_ID"; then
+
+# Uncomment for update debug
+#echo START_TIME ${START_TIME}
+#echo UPDATE_FREQUENCY ${UPDATE_FREQUENCY}
+
     if [[ -n "$START_TIME" && $(date +%s) -gt $((START_TIME + UPDATE_FREQUENCY * 2)) ]]; then
       log_error "No new files to process after two update cycles. Is fetch_osc.sh running?"
       exit 1
     fi
     SLEEP_TIME=$(calculate_sleep_time)
+
+# Uncomment for update debug
+#echo SLEEP_TIME ${SLEEP_TIME}
+
     log_message "No new files available, waiting $SLEEP_TIME s"
     sleep_with_interrupts "$SLEEP_TIME"
     continue
