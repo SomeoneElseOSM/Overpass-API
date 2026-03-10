@@ -10,6 +10,9 @@ df .
 cd /opt/op
 du -s * | sort -n -r 
 echo
+echo "Logs:"
+ls -alt log
+echo
 echo "fetched_osc status:"
 ls -alt diff
 grep timestamp diff/state.txt
