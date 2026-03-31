@@ -5,10 +5,10 @@
 echo "Overpass health check:"
 hostname
 dnsdomainname
+cd /opt/op
 echo "Disk space and usage:"
 grep timestamp diff/state.txt
 df .
-cd /opt/op
 du -s * | sort -n -r 
 echo
 echo "Logs:"
