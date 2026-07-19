@@ -1,0 +1,8 @@
+User-agent: BrigadeControl
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+#Allow: /
+#Crawl-delay: 120 seconds
+

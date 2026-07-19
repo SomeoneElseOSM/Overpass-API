@@ -1,0 +1,7 @@
+# After DocumentRoot
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT}  ^.*BrigadeControl.*$ [or]
+RewriteCond %{HTTP_USER_AGENT}  ^.*ClaudeBot.*$ [or]
+RewriteCond %{HTTP_USER_AGENT}  ^-?$
+RewriteRule . - [R=403,L]
+
