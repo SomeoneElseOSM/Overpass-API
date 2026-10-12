@@ -1,3 +1,8 @@
+=0.7.62.11-r19 and -r20 (2026-10-12)=
+
+* Stop the OverpassQL parser looping past the nesting limit. Fixes [drolbr/Overpass-API#807](https://github.com/drolbr/Overpass-API/issues/807).
+* 0.7.62.11-r20 is the same release as 0.7.62.11-r19 but with an updated CHANGELOG-DOCKER.md file
+
 =0.7.62.11-r17 and -r18 (2026-08-31)=
 
 * Remove duplicate access-control-allow-origin header since the interpreter already emits it
