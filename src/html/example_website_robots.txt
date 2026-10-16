@@ -6,3 +6,20 @@ Disallow: /
 #Allow: /
 #Crawl-delay: 120 seconds
 
+User-agent: Tuvla
+Disallow: /
+
+User-agent: AmenityFinder
+Disallow: /
+
+User-agent: I40CorridorResearch
+Disallow: /
+
+User-agent: osm-pt-geojson
+Disallow: /
+
+User-agent: Place Keys
+Disallow: /
+
+User-agent: Fetch-CRM
+Disallow: /
