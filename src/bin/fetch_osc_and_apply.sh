@@ -97,7 +97,7 @@ LAST_UPDATE_TIME=
 CHILD_PID=
 
 # Get execution directory
-EXEC_DIR="$(realpath "$(dirname "$0")")"
+EXEC_DIR="$(dirname "$(realpath "$0")")"
 
 # Get database directory
 DB_DIR=$("$EXEC_DIR/dispatcher" --show-dir)
@@ -618,9 +618,6 @@ verify_globals
 
 echo >> "$LOG_FILE"
 log_message "Starting fetch and apply from $SOURCE_URL"
-
-# This may be legacy code for an unused directory
-mkdir -p "$DB_DIR/augmented_diffs/"
 
 CURRENT_ID=$(($(read_current_state) + 0))
 
