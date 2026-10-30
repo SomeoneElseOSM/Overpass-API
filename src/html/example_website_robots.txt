@@ -23,3 +23,9 @@ Disallow: /
 
 User-agent: Fetch-CRM
 Disallow: /
+
+User-agent: KnoxMap
+Disallow: /
+
+User-agent: JarvisLocalMerchantCRM
+Disallow: /
