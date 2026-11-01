@@ -6,6 +6,7 @@ RewriteCond %{HTTP_USER_AGENT}  ^.*Tuvla.*$ [or]
 RewriteCond %{HTTP_USER_AGENT}  ^.*Place\ Keys.*$ [or]
 RewriteCond %{HTTP_USER_AGENT}  ^.*KnoxMap.*$ [or]
 RewriteCond %{HTTP_USER_AGENT}  ^.*CrescentMediaBot.*$ [or]
+RewriteCond %{HTTP_USER_AGENT}  ^.*KnowMyPatient.*$ [or]
 RewriteCond %{HTTP_USER_AGENT}  ^-?$
 RewriteRule . - [R=403,L]
 
