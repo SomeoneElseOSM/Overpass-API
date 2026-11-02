@@ -29,3 +29,15 @@ Disallow: /
 
 User-agent: JarvisLocalMerchantCRM
 Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: RadioAngel
+Disallow: /
+
+User-agent: SaabDrive
+Disallow: /
