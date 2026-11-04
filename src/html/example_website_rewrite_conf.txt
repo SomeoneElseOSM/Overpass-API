@@ -9,6 +9,8 @@ RewriteCond %{HTTP_USER_AGENT}  ^.*CrescentMediaBot.*$ [or]
 RewriteCond %{HTTP_USER_AGENT}  ^.*KnowMyPatient.*$ [or]
 RewriteCond %{HTTP_USER_AGENT}  ^.*curl.*$ [or]
 RewriteCond %{HTTP_USER_AGENT}  ^.*SaabDrive.*$ [or]
-RewriteCond %{HTTP_USER_AGENT}  ^-?$
+RewriteCond %{HTTP_USER_AGENT}  ^.*example.com.*$ [or]
+RewriteCond %{HTTP_USER_AGENT}  ^-?$ [or]
+RewriteCond %{HTTP_REFERER}     ^.*pikmin-map.pixelpirate.fr.*$
 RewriteRule . - [R=403,L]
 

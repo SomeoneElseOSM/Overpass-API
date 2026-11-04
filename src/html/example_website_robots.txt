@@ -41,3 +41,6 @@ Disallow: /
 
 User-agent: SaabDrive
 Disallow: /
+
+User-agent: DeepResearchAssistant
+Disallow: /
